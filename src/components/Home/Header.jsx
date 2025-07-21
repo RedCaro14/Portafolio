@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 // src/components/HeroSection.jsx
 export default function HeroSection() {
   return (
