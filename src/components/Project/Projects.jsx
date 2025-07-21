@@ -1,42 +1,10 @@
-<<<<<<< HEAD
 import React from "react";
 
 const PortfolioSection = () => {
-=======
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { projects, categories } from '../../data/projects';
-
-const Projects = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedProject, setSelectedProject] = useState(null);
-  const navigate = useNavigate();
-
-  const filteredProjects = selectedCategory === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === selectedCategory);
-
-  const handleProjectClick = (project) => {
-    setSelectedProject(project);
-  };
-
-  const closeModal = () => {
-    setSelectedProject(null);
-  };
-
-  const handleModalClick = (e) => {
-    // Only close if clicking the backdrop (not the modal content)
-    if (e.target === e.currentTarget) {
-      closeModal();
-    }
-  };
-
->>>>>>> d8844a6c394483333598168d92b4cb35f6a302a6
   return (
     <section className="bg-gradient-to-b from-white to-gray-50 py-20 px-6 md:px-20">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-<<<<<<< HEAD
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Proyectos destacados</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">Descubre algunos de mis trabajos más significativos en diseño y desarrollo web</p>
         </div>
@@ -51,102 +19,6 @@ const Projects = () => {
                 className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-300" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-=======
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            My Projects
-          </h2>
-          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
-          Personal projects like apps, games, and art, each combining code and design.
-          </p>
-          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
-          <strong>Main Roles:</strong> Software Developer, Tech Lead
-          </p>
-        </div>
-
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map(category => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${
-                selectedCategory === category.id
-                  ? 'bg-indigo-600 text-white'
-                  : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
-              }`}
-            >
-              {category.name}
-              <span className="ml-1 text-gray-900 dark:text-gray-100 text-sm">
-                ({category.id === 'all' ? projects.length : projects.filter(project => project.category === category.id).length})
-              </span>  
-            </button>
-          ))}
-        </div>
-
-        {/* Projects Grid */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {filteredProjects.map((project, index) => (
-            <div
-              key={index}
-              onClick={() => handleProjectClick(project)}
-              className="group bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer"
-            >
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                {project.featured && (
-                  <span className="absolute top-4 right-4 bg-indigo-600 text-white text-xs px-3 py-1 rounded-full">
-                    Featured
-                  </span>
-                )}
-              </div>
-              
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  {project.description}
-                </p>
-                
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.stack.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex gap-4">
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 px-4 py-2 bg-indigo-600 text-white rounded-lg text-center hover:bg-indigo-700 transition-colors"
-                  >
-                    {project.category === 'art' ? 'View Artwork' : 'Live Demo'}
-                  </a>
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg text-center hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                    >
-                      View Code
-                    </a>
-                  )}
-                </div>
-              </div>
->>>>>>> d8844a6c394483333598168d92b4cb35f6a302a6
             </div>
             <div className="p-6">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Cartilla PCMU</h3>
