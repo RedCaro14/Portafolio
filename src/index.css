@@ -1,0 +1,104 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}*/
+
+/* Custom global styles */
+body {
+  @apply bg-gray-700 font-montserrat;;
+}
+
+h1 {
+  @apply text-4xl font-bold text-center mt-8 mb-4;
+}
+
+.container {
+  @apply mx-auto max-w-2xl p-4;
+}
+
+.containers {
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .containers {
+      max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .containers {
+      max-width: 768px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  @apply px-4 py-2 rounded text-white font-semibold;
+}
+
+button.primary {
+  @apply bg-blue-500 hover:bg-blue-700;
+}
+
+.radio-input {
+  @apply h-5 w-5 text-blue-600 border-gray-300 focus:ring-blue-500;
+}
+
+button.secondary {
+  @apply bg-red-500 hover:bg-red-700;
+}
+
+.input {
+  @apply text-black w-full px-4 py-2 mb-4 border rounded;
+}
+
+.list {
+  @apply mt-6 space-y-4;
+}
+
+.list-item {
+  @apply p-4 bg-white shadow flex justify-between items-center rounded;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #FAC80C !important; /* red */
+}
+
+.swiper-pagination-bullet {
+  background: #FAC80C !important; /* orange */
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #FAC80C !important; /* red */
+  opacity: 1;
+}
+
+
+.clip-hexagon {
+  clip-path: polygon(
+    25% 6.7%,
+    75% 6.7%,
+    100% 50%,
+    75% 93.3%,
+    25% 93.3%,
+    0% 50%
+  );
+}
