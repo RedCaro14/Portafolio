@@ -15,7 +15,7 @@ const Navbar = () => {
     }`;
 
   return (
-    <nav className="flex justify-between items-center px-6 py-4 bg-white shadow-md">
+    <nav className="flex justify-between items-center px-20 py-4 bg-white shadow-md">
       <div className="flex items-center space-x-3">
         <div className="text-pink-600 font-bold text-xl flex items-center space-x-2">
           <span>CaroRed</span>
@@ -37,14 +37,6 @@ const Navbar = () => {
         <Link to="/" className={linkClass("/")}>Inicio</Link>
         <Link to="/portfolio" className={linkClass("/portfolio")}>Portafolio</Link>
         <Link to="/profile" className={linkClass("/profile")}>Perfil</Link>
-        <a
-          href="https://github.com/RedCaro14"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-400 hover:text-pink-500 transition"
-        >
-          <FaGithub className="text-xl" />
-        </a>
       </div>
     </nav>
   );

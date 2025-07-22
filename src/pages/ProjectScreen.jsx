@@ -4,14 +4,32 @@ import FloatingButtons from "../components/FloatingButtons";
 
 const content = {
   Principal: (
-    <div className="text-center max-w-3xl mx-auto px-4">
-      <h2 className="text-4xl font-bold mb-4 text-gray-900">
-        Explorando Mis Proyectos
-      </h2>
-      <p className="text-lg text-gray-600">
-        Aquí encontrarás una muestra de los proyectos en los que he trabajado como desarrolladora, diseñadora y artista visual. Cada uno refleja procesos creativos, soluciones funcionales y una búsqueda constante por integrar estética, experiencia y tecnología.
-      </p>
-</div>
+    <>
+      <div className="text-center max-w-3xl mx-auto px-4">
+        <h2 className="text-4xl font-bold mt-4 mb-6 text-gray-700">
+          Explorando mis proyectos
+        </h2>
+        <p className="text-lg text-gray-600">
+          Aquí encontrarás una muestra de los proyectos en los que he trabajado como desarrolladora, diseñadora y artista visual. Cada uno refleja procesos creativos, soluciones funcionales y una búsqueda constante por integrar estética, experiencia y tecnología.
+        </p>
+        {/* Imagen */}
+        <div className="mt-8">
+          
+        </div>
+      </div>
+
+      {/* Líneas horizontales fuera del contenedor con padding */}
+      <div className="w-screen">
+          <img
+            src="/images/proyectos.png"
+            alt="Foto de Carolina"
+          />
+        <div className="h-1 bg-pink-600 w-screen"></div>
+        <div className="h-1 bg-pink-600 w-screen mt-1"></div>
+      </div>
+    </>
+
+    
   ),
   Videojuegos: (
     <div>
@@ -45,10 +63,10 @@ const ProjectScreen = () => {
   const tags = ["Videojuegos", "Desarrollo", "Diseño", "Arte"];
 
   return (
-    <div className="min-h-screen bg-gray-50 px-8 py-16 relative">
+    <div className="bg-gray-50 relative">
       <FloatingButtons tags={tags} selected={selected} setSelected={setSelected} />
 
-      <div className="max-w-4xl mx-auto pt-8">
+      <div className=" pt-8">
         {content[selected]}
       </div>
     </div>
