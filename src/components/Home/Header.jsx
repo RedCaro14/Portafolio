@@ -1,19 +1,19 @@
 // src/components/HeroSection.jsx
+
 export default function HeroSection() {
   return (
     <section className="flex flex-col-reverse md:flex-row items-center justify-between px-8 md:px-20 py-20 bg-white min-h-screen">
-      
+
       {/* Texto */}
       <div className="text-center md:text-left max-w-xl">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
           Hola, soy <span className="text-pink-600">Carolina</span>
         </h1>
         <p className="mt-6 text-lg text-gray-700">
-          Ayudo a empresas y emprendedores a transformar ideas en productos digitales
-          funcionales y escalables que resuelven problemas reales y generan valor tangible.
+          Creadora multidisciplinar con interés en lo mutable y en los procesos que dan forma a lo cotidiano. Desarrollo proyectos que exploran la identidad, lo íntimo y los elementos invisibilizados, con el objetivo de generar soluciones creativas, funcionales y con sentido crítico.
         </p>
 
-        <div className="mt-8 flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+        <div className="mt-8 flex flex-col md:flex-row gap-4 justify-center">
           <a
             href="#portafolio"
             className="bg-pink-600 hover:bg-pink-700 text-white font-medium py-3 px-6 rounded-full text-center"
@@ -29,7 +29,13 @@ export default function HeroSection() {
         </div>
       </div>
 
-
+      {/* Imagen */}
+      <div className="mb-12 md:mb-0 md:ml-12">
+        <img
+          src="/images/mi-foto.png"
+          alt="Foto de Carolina"
+        />
+      </div>
     </section>
   );
 }

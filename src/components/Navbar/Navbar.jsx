@@ -1,15 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Typewriter } from "react-simple-typewriter";
 import { FaGithub } from "react-icons/fa";
 
 const Navbar = () => {
+  const location = useLocation();
+  const currentPath = location.pathname;
+
+  const linkClass = (path) =>
+    `transition ${
+      currentPath === path
+        ? "border-b-2 border-pink-500 text-pink-500"
+        : "text-gray-600 hover:text-pink-500"
+    }`;
+
   return (
     <nav className="flex justify-between items-center px-6 py-4 bg-white shadow-md">
       <div className="flex items-center space-x-3">
-        <div className="text-blue-600 text-2xl font-bold">ⓒ</div>
         <div className="text-pink-600 font-bold text-xl flex items-center space-x-2">
-          <span>Carolina Rojas</span>
+          <span>CaroRed</span>
           <span className="text-gray-600 text-base">
             <Typewriter
               words={["Artista", "Desarrolladora", "Diseñadora"]}
@@ -24,13 +33,17 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Botones de navegación corregidos */}
-      <div className="flex items-center space-x-8 text-gray-400 font-medium text-base">
-        <Link to="/" className="border-b-2 border-pink-500 text-pink-500">Inicio</Link>
-        <Link to="/portfolio" className="hover:text-pink-500 transition">Portafolio</Link>
-        <Link to="/profile" className="hover:text-pink-500 transition">Perfil</Link>
-        <a href="https://github.com/RedCaro14" target="_blank" rel="noopener noreferrer">
-          <FaGithub className="text-xl hover:text-pink-500 transition" />
+      <div className="flex items-center space-x-8 font-medium text-base">
+        <Link to="/" className={linkClass("/")}>Inicio</Link>
+        <Link to="/portfolio" className={linkClass("/portfolio")}>Portafolio</Link>
+        <Link to="/profile" className={linkClass("/profile")}>Perfil</Link>
+        <a
+          href="https://github.com/RedCaro14"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-400 hover:text-pink-500 transition"
+        >
+          <FaGithub className="text-xl" />
         </a>
       </div>
     </nav>

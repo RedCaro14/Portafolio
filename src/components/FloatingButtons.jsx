@@ -8,10 +8,10 @@ const FloatingButtons = ({ tags, selected, setSelected }) => {
         <button
           key={tag}
           onClick={() => setSelected(tag)}
-          className={`bg-white shadow-xl rounded-full px-2 py-4 text-sm font-medium transition duration-300 w-10 ${
+          className={`shadow-xl rounded-full px-2 py-4 text-sm font-medium transition duration-300 w-10 ${
             selected === tag
-              ? "bg-[#F00E8D] text-white"
-              : "text-gray-700 hover:bg-[#F00E8D] hover:text-white"
+              ? "bg-white text-[#F00E8D]"
+              : "bg-white text-gray-500 hover:bg-[#F00E8D] hover:text-white"
           }`}
           style={{
             writingMode: "vertical-rl",
