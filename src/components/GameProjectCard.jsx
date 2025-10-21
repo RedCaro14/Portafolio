@@ -4,14 +4,14 @@ const GameProjectCard = ({ image, title, year, team, role, summary, details, itc
   const [showDetails, setShowDetails] = useState(false);
 
   return (
-    <div className="bg-white shadow-lg rounded-3xl overflow-hidden max-w-md mx-auto hover:shadow-2xl transition-shadow duration-300">
+    <div className="bg-white dark:bg-gray-800 shadow-lg rounded-3xl overflow-hidden max-w-md mx-auto hover:shadow-2xl transition-shadow duration-300">
       <img src={image} alt={title} className="w-full h-56 object-cover" />
 
       <div className="p-6">
-        <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
-        <p className="text-sm text-gray-500 mt-1">{year} · {team}</p>
-        <p className="mt-3 text-gray-700"><strong>Rol:</strong> {role}</p>
-        <p className="mt-3 text-gray-600 italic">{summary}</p>
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{title}</h3>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{year} · {team}</p>
+        <p className="mt-3 text-gray-700 dark:text-gray-300"><strong>Rol:</strong> {role}</p>
+        <p className="mt-3 text-gray-600 dark:text-gray-400 italic">{summary}</p>
 
         <div className="mt-5 flex justify-between items-center">
           <button
@@ -35,7 +35,7 @@ const GameProjectCard = ({ image, title, year, team, role, summary, details, itc
         </div>
 
         {showDetails && (
-          <div className="mt-5 text-gray-800 text-sm border-t pt-4 whitespace-pre-line">
+          <div className="mt-5 text-gray-800 dark:text-gray-200 text-sm border-t border-gray-200 dark:border-gray-700 pt-4 whitespace-pre-line">
             {details}
           </div>
         )}
@@ -45,4 +45,3 @@ const GameProjectCard = ({ image, title, year, team, role, summary, details, itc
 };
 
 export default GameProjectCard;
-
