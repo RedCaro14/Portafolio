@@ -1,6 +1,7 @@
 import React from "react";
 import GameProjectCard from "../GameProjectCard";
-import DesignSection from "../Design/WebDesign"; 
+import DesignSection from "../Design/WebDesign";
+import { useTheme } from "../../context/ThemeContext"; 
 
 const contentMap = {
   Principal: PrincipalContent,
@@ -14,6 +15,8 @@ export default function ProjectContent({ selectedCategory }) {
 }
 
 function PrincipalContent() {
+  const { isDarkMode } = useTheme();
+
   return (
     <>
       <div className="text-center max-w-3xl mx-auto px-4">
@@ -25,7 +28,10 @@ function PrincipalContent() {
         </p>
       </div>
       <div className="w-screen">
-        <img src="/images/proyectos.png" alt="Foto de Carolina" />
+        <img
+          src={isDarkMode ? "/images/proyectosdark.png" : "/images/proyectos.png"}
+          alt="Foto de Carolina"
+        />
         <div className="h-1 bg-pink-600 w-screen" />
         <div className="h-1 bg-pink-600 w-screen mt-1" />
       </div>

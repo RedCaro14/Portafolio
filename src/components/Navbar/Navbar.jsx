@@ -24,8 +24,9 @@ const Navbar = () => {
         {/* Logo y typewriter C-E-N-T-R-A-D-O-S */}
         <div className="flex flex-col items-center w-full md:w-auto">
           <div className="flex items-center space-x-2">
-            <span className="text-pink-600 font-bold text-xl">CaroRed</span>
-            <span className="text-gray-600 dark:text-gray-300 text-base">
+          <Link to="/" className="flex items-center space-x-2">
+            <span className="text-pink-600 font-bold text-xl cursor-pointer">CaroRed</span>
+            <span className="text-gray-600 dark:text-gray-300 text-base cursor-pointer">
               <Typewriter
                 words={["Artista", "Desarrolladora", "Diseñadora"]}
                 loop={0}
@@ -36,7 +37,8 @@ const Navbar = () => {
                 delaySpeed={1500}
               />
             </span>
-          </div>
+          </Link>
+        </div>
           {/* Íconos centrados debajo en móvil */}
           <div className="flex items-center justify-center gap-4 mt-4 md:hidden">
             <button

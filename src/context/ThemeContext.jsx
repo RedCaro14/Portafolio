@@ -4,9 +4,11 @@ const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
-    const savedTheme = localStorage.getItem('theme');
-    return savedTheme ? savedTheme === 'light' : true;
-  });
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) return savedTheme === 'dark';
+  // Detectar preferencia de sistema al cargar por primera vez
+  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+});
 
 
   useEffect(() => {

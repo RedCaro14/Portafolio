@@ -10,7 +10,7 @@ export default function HeroSection() {
             Hola, soy <span className="text-pink-600">Carolina</span>
           </h1>
           <p className="mt-6 text-lg text-gray-700 dark:text-gray-300">
-            Creadora multidisciplinar con interés en lo mutable y en los procesos que dan forma a lo cotidiano. Desarrollo proyectos que exploran la identidad, lo íntimo y los elementos invisibilizados, con el objetivo de generar soluciones creativas, funcionales y con sentido crítico.
+            Profesional multidisciplinaria especializada en el desarrollo de proyectos innovadores que exploran identidad, intimidad y realidades invisibilizadas. Comprometida con la generación de soluciones creativas, funcionales y con rigor crítico, orientadas a transformar procesos cotidianos a través de una mirada sensible y estratégica.
           </p>
           <div className="mt-10 flex flex-col md:flex-row gap-6 md:gap-4 w-full">
             <Link
