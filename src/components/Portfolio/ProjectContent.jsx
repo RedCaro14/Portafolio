@@ -1,13 +1,11 @@
 import React from "react";
 import GameProjectCard from "../GameProjectCard";
-import DesignSection from "../Design/WebDesign"; // Ajusta la ruta a tu estructura
+import DesignSection from "../Design/WebDesign"; 
 
 const contentMap = {
   Principal: PrincipalContent,
   Videojuegos: VideojuegosContent,
   Diseño: DiseñoContent,
-  Arte: ArteContent,
-  Desarrollo: DesarrolloContent,
 };
 
 export default function ProjectContent({ selectedCategory }) {
@@ -78,20 +76,4 @@ function DiseñoContent() {
   return <DesignSection />;
 }
 
-function ArteContent() {
-  return (
-    <div>
-      <h2 className="text-3xl font-bold mb-4 dark:text-white">Proyectos de Arte</h2>
-      <p className="dark:text-gray-300">Aquí va tu contenido artístico: ilustraciones, cerámica, etc.</p>
-    </div>
-  );
-}
 
-function DesarrolloContent() {
-  return (
-    <div>
-      <h2 className="text-3xl font-bold mb-4 dark:text-white">Proyectos de Desarrollo</h2>
-      <p className="dark:text-gray-300">Aplicaciones, sitios web, lógica en React, etc.</p>
-    </div>
-  );
-}

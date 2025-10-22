@@ -1,57 +1,58 @@
-import React from "react";
-
-const Profile = () => {
+export default function ProfileScreen() {
   return (
-    <div className="w-full bg-gradient-to-b from-white to-gray-50">
-      {/* Header background and introduction */}
-      
-      <div className="bg-gradient-to-r from-[#F00E8D] via-[#ff4da1] to-[#F00E8D]/90 py-40 ">
-        <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
-          <p className="text-lg font-semibold leading-relaxed text-white">
-            Maestra en Artes Plásticas y Visuales con profundización en medios digitales, fotografía y video,
-            con experiencia en la ejecución de proyectos visuales, diseño gráfico y editorial, así como en la gestión de equipos de comunicación y diseño.
+    <section
+      className="w-full min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300 flex"
+      style={{ minHeight: "100vh" }}
+    >
+      <div className="max-w-6xl mx-auto w-full py-16 px-4 lg:px-12">
+        <header className="mb-12">
+          <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Perfil Profesional</h2>
+          <div className="h-2 w-36 bg-pink-600 dark:bg-pink-500 rounded mb-7" />
+          <p className="text-lg md:text-xl max-w-3xl text-gray-700 dark:text-gray-300">
+            Maestra en Artes Plásticas y Visuales con enfoque en medios digitales, fotografía y video.
+            Experta en dirección de proyectos visuales y diseño editorial, con gestión de equipos multidisciplinares.
           </p>
+        </header>
+        <div className="grid md:grid-cols-2 gap-14 mt-8">
+          <div>
+            <h3 className="text-lg font-bold tracking-wide text-pink-600 dark:text-pink-400 mb-2 uppercase">
+              Experiencia
+            </h3>
+            <div className="h-1 w-14 bg-pink-300 dark:bg-pink-600 rounded mb-4" />
+            <ul className="space-y-6 text-base text-gray-900 dark:text-gray-100">
+              <li>
+                <span className="font-bold">Creación de contenido gráfico en Aquatic Educación Acuática</span>
+                <div className="text-xs mt-1 text-zinc-400 dark:text-zinc-400 italic">Dic 2024 – Actualmente</div>
+                <div className="text-sm dark:text-gray-300">
+                  Eventos deportivos, gestión web y diagramación editorial
+                </div>
+              </li>
+              <li>
+                <span className="font-bold">Producción y logística gráfica para ACOLTEN</span>
+                <div className="text-xs mt-1 text-zinc-400 dark:text-zinc-400 italic">Ene 2022 – Sep 2023</div>
+              </li>
+              <li>
+                <span className="font-bold">Diseñadora en Ministerio de las Culturas, las Artes y los Saberes</span>
+                <div className="text-xs mt-1 text-zinc-400 dark:text-zinc-400 italic">Dic 2022 – Oct 2024</div>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-lg font-bold tracking-wide text-pink-600 dark:text-pink-400 mb-2 uppercase">
+              Conocimientos Técnicos
+            </h3>
+            <div className="h-1 w-14 bg-pink-300 dark:bg-pink-600 rounded mb-4" />
+            <ul className="space-y-3 text-base text-gray-900 dark:text-gray-100">
+              <li>Diseño web WordPress y SharePoint</li>
+              <li>UX/UI y navegación intuitiva</li>
+              <li>Contenidos digitales para redes sociales</li>
+              <li>Adobe CC: Photoshop, Illustrator, InDesign</li>
+              <li>Diagramación editorial y formatos editoriales</li>
+              <li>Artes plásticas, técnicas mixtas</li>
+            </ul>
+          </div>
         </div>
       </div>
-
-      {/* Experience Section */}
-      <section className="bg-gray-50 py-12 px-6 md:px-16">
-        <h2 className="text-2xl font-bold text-[#F00E8D] mb-6">Experiencia</h2>
-        <ul className="list-disc pl-5 space-y-2 text-gray-800 text-sm">
-          <li>Creación de contenido gráfico, para eventos deportivos nacionales (Aquatic Educación Acuática). Dic 2024 – Actualmente.</li>
-          <li>Producción de piezas gráficas y visuales para medios digitales e impresos, manejo y actualización de página web, edición y diagramación editorial.</li>
-          <li>Elaboración de material gráfico y visual para eventos deportivos nacionales e internacionales y gestión logística (ACOLTEN). Ene 2022 – Sep 2023.</li>
-        </ul>
-
-        <h3 className="text-xl font-bold text-[#F00E8D] mt-10">Diseñadora</h3>
-        <ul className="list-disc pl-5 space-y-2 text-gray-800 text-sm mt-2">
-          <li>Ministerio de las Culturas, las Artes y los Saberes. Dic 2022 – Oct 2024.</li>
-        </ul>
-
-        <h3 className="text-xl font-bold text-[#F00E8D] mt-10">Artista</h3>
-        <ul className="list-disc pl-5 space-y-2 text-gray-800 text-sm mt-2">
-          <li>Exposición Primavera 2021, Instituto Municipal de Cultura y Turismo de Cajicá. 2021</li>
-          <li>Proyecto Ensamble de Creación, San Victorino ASOSANVICTORINO. 2019</li>
-          <li>Exposición colectiva 3D Divergencias, Fundación Alzate Avendaño. 2018</li>
-          <li>Exposición colectiva TRAYECTOS, Fundación Alzate Avendaño. 2018</li>
-          <li>Exposición colectiva FotoEncuentro 6 "imagen, cuerpo y medicina", Universidad Jorge Tadeo Lozano. 2018</li>
-          <li>Exposición Arte+Libro, Galería Neebex. 2016</li>
-        </ul>
-      </section>
-
-      {/* Knowledge Section */}
-      <section className="bg-white py-12 px-6 md:px-16">
-        <h2 className="text-2xl font-bold text-[#F00E8D] mb-6">Conocimientos</h2>
-        <ul className="list-disc pl-5 space-y-2 text-gray-800 text-sm">
-          <li>Diseño web, desarrollo y mantenimiento de páginas WordPress, diseño para navegación intuitiva, y gestión de sitios SharePoint.</li>
-          <li>Diseño gráfico, conceptualización y producción de contenido digital para plataformas y redes sociales.</li>
-          <li>Manejo de Adobe Suite, incluyendo Photoshop, Illustrator e InDesign.</li>
-          <li>Diseño editorial, diagramación en InDesign, armado tipográfico y adaptación a formatos editoriales.</li>
-          <li>Artes plásticas, desarrollo de proyectos artísticos, instalaciones y técnicas tradicionales y digitales.</li>
-        </ul>
-      </section>
-    </div>
+    </section>
   );
-};
-
-export default Profile;
+}

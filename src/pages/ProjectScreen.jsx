@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import FloatingButtons from "../components/FloatingButtons";
 import ProjectContent from "../components/Portfolio/ProjectContent";
 
-const tags = ["Principal", "Videojuegos", "Diseño", "Arte", "Desarrollo"];
+const tags = ["Principal", "Videojuegos", "Diseño"];
 
 export default function ProjectScreen() {
   const [selected, setSelected] = useState("Principal");
