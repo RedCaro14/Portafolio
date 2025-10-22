@@ -20,7 +20,7 @@ export default function HeroSection() {
               Ver portafolio
             </Link>
             <a
-              href="https://wa.me/57minumero?text=Hola%20Carolina,%20quiero%20más%20información"
+              href="https://wa.me/573024789848?text=Hola%20Carolina,%20quiero%20más%20información"
               className="border border-pink-600 text-pink-600 hover:bg-pink-50 font-medium py-3 px-6 rounded-full text-center transition dark:border-pink-400 dark:text-pink-400 dark:hover:bg-gray-800 w-full md:w-auto"
               target="_blank"
               rel="noopener noreferrer"
